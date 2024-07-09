@@ -26,6 +26,7 @@
     visibility: hidden;
 }
 
+/* Card Horizontal Animation */
 @keyframes slideHorizontal {
     0% {
       transform: translateX(0);
@@ -47,4 +48,11 @@
 
   .sliding-cards:hover {
     animation-play-state: paused;
+  }
+
+  /* Lock Screen */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
