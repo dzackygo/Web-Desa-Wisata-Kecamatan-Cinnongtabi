@@ -6,6 +6,8 @@
     <title>Wisata Lembah Cinta - Jelajahi Keindahan Alam</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="src/style.css">
+    
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
 
@@ -29,45 +31,182 @@
       </div>
     </div>
 
+
     <!-- Hero Section -->
     <section id="home" class="hero bg-cover bg-center h-screen flex items-center relative" style="background-image: url('/img/background.jpg');">
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Jelajahi Keindahan Alam Indonesia</h1>
-            <p class="text-xl text-white mb-8">Temukan destinasi wisata menakjubkan untuk liburan Anda</p>
+            <p class="text-xl text-white mb-8">Temukan destinasi wisata menakjubkan untuk liburan and</p>
             <a href="#destinations" class="bg-yellow-500 text-gray-900 py-3 px-6 rounded-lg font-bold hover:bg-yellow-400">Mulai Petualangan</a>
         </div>
     </section>
-            
-    <!-- Popular Destinations Section -->
-    <section id="destinations" class="popular-destinations py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Destinasi Populer</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://source.unsplash.com/800x600/?bali" alt="Bali" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Bali</h3>
-                        <p class="text-gray-600">Pulau dewata dengan keindahan alam dan budaya yang memukau.</p>
+
+    <div class="container mx-auto px-4 py-8" >
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                   <!-- Card 1 -->
+                   <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300">
+                    <div class="flex justify-between items-center">
+                        <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
+                        <div class="flex">
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
+                        This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://source.unsplash.com/800x600/?borobudur" alt="Borobudur" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Borobudur</h3>
-                        <p class="text-gray-600">Candi Buddha terbesar di dunia dengan arsitektur menakjubkan.</p>
-                    </div>x`
+      
+          <!-- Card 2 -->
+          <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300">
+            <div class="flex justify-between items-center">
+                <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
+                <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
+                <div class="flex">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://source.unsplash.com/800x600/?raja-ampat" alt="Raja Ampat" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Raja Ampat</h3>
-                        <p class="text-gray-600">Surga bawah laut dengan keindahan terumbu karang yang memukau.</p>
+            </div>
+            <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
+                This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300">
+            <div class="flex justify-between items-center">
+                <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
+                <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
+                <div class="flex">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
+                This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
+            </div>
+          </div>
+      
+          <!-- Card 4 -->
+          <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300">
+            <div class="flex justify-between items-center">
+                <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
+                <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
+                <div class="flex">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
+                This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
+            </div>
+          </div>
+        </div>
+      </div>
+            
+    <!-- Popular Destinations Section -->
+    <section id="destinations" class="popular-destinations py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Destinasi Populer</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img class="w-full h-40 object-cover rounded-t-lg" alt="Kolam Renang" src="../img/background.jpg">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Kolam Renang</h2>
+                        <p class="text-gray-600">Nikmati kesegaran dan keindahan kolam renang kami yang bersih dan luas, cocok untuk keluarga.</p>
+                    </div>
+                </div>
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img class="w-full h-40 object-cover rounded-t-lg" alt="Tempat Memancing di Empang" src="../img/empang.jpg">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Tempat Memancing di Empang</h2>
+                        <p class="text-gray-600">Rasakan sensasi memancing di empang yang tenang dan alami, penuh dengan ikan-ikan besar.</p>
+                    </div>
+                </div>
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img class="w-full h-40 object-cover rounded-t-lg" alt="Rumah Pohon" src="../img/rumahpohon.jpg">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Rumah Pohon</h2>
+                        <p class="text-gray-600">Nikmati pemandangan alam dari atas rumah pohon kami yang nyaman dan aman untuk segala usia.</p>
+                    </div>
+                </div>
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img class="w-full h-40 object-cover rounded-t-lg" alt="Tempat Sirkuit" src="../img/sirkuit.jpg">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Tempat Sirkuit</h2>
+                        <p class="text-gray-600">Uji adrenalin Anda dengan mencoba sirkuit balap kami yang menantang dan seru, cocok untuk para pecinta kecepatan.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <div class="relative w-full h-[300px] mb-2">
         <img src="bubble.png" alt="">
