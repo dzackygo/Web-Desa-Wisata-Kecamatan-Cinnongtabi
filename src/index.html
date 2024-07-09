@@ -6,9 +6,9 @@
     <title>Wisata Lembah Cinta - Jelajahi Keindahan Alam</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link rel="stylesheet" href="src/style.css">
-    
+    <link rel="stylesheet" href="../src/style.css">
 </head>
+
 <body class="bg-gray-100 text-gray-900 font-sans">
 
     <!-- Navbar -->
@@ -33,7 +33,7 @@
 
 
     <!-- Hero Section -->
-    <section id="home" class="hero bg-cover bg-center h-screen flex items-center relative" style="background-image: url('/img/background.jpg');">
+    <section id="home" class="hero bg-cover bg-center h-screen flex items-center relative " style="background-image: url('/img/background.jpg');">
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Jelajahi Keindahan Alam Indonesia</h1>
@@ -42,6 +42,7 @@
         </div>
     </section>
 
+    <!-- Review Section -->
     <div class="container mx-auto px-4 py-8" >
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                    <!-- Card 1 -->
@@ -168,10 +169,10 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
             
     <!-- Popular Destinations Section -->
-    <section id="destinations" class="popular-destinations py-16 bg-gray-100">
+    <section id="destinations" class="popular-destinations py-16 bg-gray-100 fade-in-section">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Destinasi Populer</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
@@ -208,12 +209,8 @@
     </section>
     
 
-    <div class="relative w-full h-[300px] mb-2">
-        <img src="bubble.png" alt="">
-    </div>
-
     <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-16">
+    <section id="about" class="bg-gray-200 py-16 fade-in-section">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold">Tentang Kami</h2>
             <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Kami berkomitmen untuk membantu Anda menemukan tempat-tempat paling menakjubkan di dunia. Misi kami adalah memberikan pengalaman perjalanan terbaik dan membuat perjalanan Anda tak terlupakan.</p>
@@ -221,7 +218,7 @@
     </section>
 
     <!-- Location Section -->
-    <div class="container mx-auto px-6 py-16">
+    <div class="container mx-auto px-6 py-16 fade-in-section">
         <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Lokasi Kami</h2>
         <div class="flex justify-center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.867358469478!2d120.1243411!3d-4.0474725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d95df1c5db421bb%3A0x2425ec2a8bfd601e!2sWisata%20Lembah%20Cinta!5e0!3m2!1sid!2sid!4v1720180474344!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -235,5 +232,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
