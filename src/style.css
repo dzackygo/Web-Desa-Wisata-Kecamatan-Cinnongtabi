@@ -1,3 +1,4 @@
+/* Scrolling Effect */
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
@@ -24,3 +25,26 @@
     transform: translateY(20px);
     visibility: hidden;
 }
+
+@keyframes slideHorizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .sliding-cards {
+    display: flex;
+    animation: slideHorizontal 20s linear infinite;
+  }
+
+  .sliding-cards > div {
+    flex: 0 0 25%;
+    min-width: 25%;
+  }
+
+  .sliding-cards:hover {
+    animation-play-state: paused;
+  }
