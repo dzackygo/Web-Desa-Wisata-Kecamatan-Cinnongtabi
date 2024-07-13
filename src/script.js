@@ -55,4 +55,26 @@ accordionHeaders.forEach((header) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById("card-container");
+  const cards = Array.from(container.children);
+  const cardWidth = cards[0].offsetWidth;
+  const containerWidth = container.offsetWidth;
+
+  // Calculate the total width of all cards
+  const totalCardWidth = cards.length * (cardWidth + 16); // 16 is the margin between cards
+
+  // Clone cards to fill the container width
+  while (container.scrollWidth < containerWidth + totalCardWidth) {
+      cards.forEach(card => {
+          const clone = card.cloneNode(true);
+          container.appendChild(clone);
+      });
+  }
+
+  // Update animation duration based on the total width
+  const scrollDuration = totalCardWidth / 100; // Adjust the divisor to control speed
+  container.style.animationDuration = `${scrollDuration}s`;
+});
+
 
