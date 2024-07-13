@@ -20,6 +20,55 @@
     will-change: opacity, visibility;
 }
 
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay span {
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.destination-card:hover .overlay {
+  opacity: 1;
+}
+
 .fade-out-section.is-hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -36,19 +85,50 @@
     }
   }
 
-  .sliding-cards {
+  .gradient-text {
+    background: linear-gradient(to right, #508D4E, #80AF81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .bg-green {
+    background-color: #508D4E;
+  }
+  
+  .custom-green {
+    background-color: #508D4E;
+  }
+
+  .custom-green:hover {
+    background-color: #80AF81;
+  }
+  
+
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll {
     display: flex;
-    animation: slideHorizontal 20s linear infinite;
-  }
+    animation: scroll 30s linear infinite;
+   
+}
 
-  .sliding-cards > div {
+.animate-scroll > div {
     flex: 0 0 25%;
-    min-width: 25%;
-  }
+}
 
-  .sliding-cards:hover {
+.animate-scroll:hover {
     animation-play-state: paused;
-  }
+    
+}
 
   /* Lock Screen */
   html, body {
@@ -56,3 +136,9 @@
     width: 100%;
     position: relative;
   }
+
+  .accordion-content {
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    }
+
+    

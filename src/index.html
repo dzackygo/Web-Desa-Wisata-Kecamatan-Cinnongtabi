@@ -7,15 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="../src/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-100 text-gray-900 font-sans">
+<body class=" text-gray-900 font-sans">
 
     <!-- Navbar -->
     <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
       <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="p-4 flex flex-row items-center justify-between">
-          <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Wisata Lembah Cinta</a>
+            <a href="#" class="inline-block text-lg font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline dark:text-white" style="background: linear-gradient(to right, #16a34a, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;">
+                Wisata Lembah Cinta
+              </a>
           <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
               <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -23,306 +26,53 @@
             </svg>
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow md:pb-0 hidden md:flex md:justify-end md:flex-row">
           <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#home">Home</a>
           <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#destinations">Destinations</a>
           <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#about">About</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#review">Rating</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#location">Location</a>
         </nav>
       </div>
     </div>
 
-
     <!-- Hero Section -->
-    <section id="home" class="hero bg-cover bg-center h-screen flex items-center relative " style="background-image: url('/img/background.jpg');">
+    <section id="home" class="hero bg-cover bg-center h-screen flex items-center relative" style="background-image: url('/img/background.jpg');">
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Jelajahi Keindahan Alam Indonesia</h1>
-            <p class="text-xl text-white mb-8">Temukan destinasi wisata menakjubkan untuk liburan and</p>
-            <a href="#destinations" class="bg-yellow-500 text-gray-900 py-3 px-6 rounded-lg font-bold hover:bg-yellow-400">Mulai Petualangan</a>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-2 fade-in-section ">Wisata Lembah Cinta Wajo    </h1>
+            <p class="text-xl text-white mb-8 fade-in-section">Nikmati Pesona Alam dan Keseruan di Surga Tersembunyi Sulawesi Selatan</p>
+            <a href="#destinations" class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:custom-green-hover fade-in-section">Jelajahi Sekarang</a>
         </div>
     </section>
-
-    <!-- Review Section -->
-    <div class="container mx-auto px-4 py-8 fade-in-section" >
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">APA YANG MEREKA KATAKAN TENTANG KAMI?</h2>
-        <div class="sliding-cards  ">
-            <!-- Card 1 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                    <div class="flex justify-between items-center">
-                        <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                        <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                        <div class="flex">
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                            </svg>
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                            </svg>
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                            </svg>
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                            </svg>
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                        This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                    </div>
-            </div>
-  
-            <!-- Card 2 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                            <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                            <div class="flex">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                            This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                        </div>
-            </div>
-  
-            <!-- Card 3 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                            <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                            <div class="flex">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                            This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                        </div>
-            </div>
-  
-            <!-- Card 4 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                            <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                            <div class="flex">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                            This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                        </div>
-            </div>
-
-            <!-- Card 1 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                <div class="flex justify-between items-center">
-                    <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                    <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                </div>
-                <div class="flex justify-between items-center">
-                    <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                    <div class="flex">
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                        </svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                        </svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                        </svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                        </svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                    This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                            <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                            <div class="flex">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                            This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                        </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                            <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                            <div class="flex">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                            This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                        </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-5 rounded-md shadow-md hover:scale-105 transition duration-300 mx-4">
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold">John Doe</div>
-                            <div class="text-gray-500 dark:text-gray-400 text-sm">2 hours ago</div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-gray-900 dark:text-gray-200 text-md">Amazing Experience</div>
-                            <div class="flex">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-200" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-gray-900 dark:text-gray-200 text-md mt-2">
-                            This place is absolutely stunning! The staff were very friendly and the atmosphere was serene and peaceful. I highly recommend this place for a relaxing getaway.
-                        </div>
-            </div>
-        </div>
-    </div>
             
-    <!-- Popular Destinations Section -->
-    <section id="destinations" class="popular-destinations py-16 bg-gray-100 fade-in-section">
+    <!-- Popular Destinations Section --> 
+    <section id="destinations" class="popular-destinations fade-in-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Destinasi Populer</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mt-16 mb-8 text-center fade-in-section ">Destinasi Populer</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out">
                     <img class="w-full h-40 object-cover rounded-t-lg" alt="Kolam Renang" src="../img/background.jpg">
                     <div class="p-4">
                         <h2 class="text-xl font-semibold">Kolam Renang</h2>
                         <p class="text-gray-600">Nikmati kesegaran dan keindahan kolam renang kami yang bersih dan luas, cocok untuk keluarga.</p>
                     </div>
                 </div>
-                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out">
                     <img class="w-full h-40 object-cover rounded-t-lg" alt="Tempat Memancing di Empang" src="../img/empang.jpg">
                     <div class="p-4">
                         <h2 class="text-xl font-semibold">Tempat Memancing di Empang</h2>
                         <p class="text-gray-600">Rasakan sensasi memancing di empang yang tenang dan alami, penuh dengan ikan-ikan besar.</p>
                     </div>
                 </div>
-                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out">
                     <img class="w-full h-40 object-cover rounded-t-lg" alt="Rumah Pohon" src="../img/rumahpohon.jpg">
                     <div class="p-4">
                         <h2 class="text-xl font-semibold">Rumah Pohon</h2>
                         <p class="text-gray-600">Nikmati pemandangan alam dari atas rumah pohon kami yang nyaman dan aman untuk segala usia.</p>
                     </div>
                 </div>
-                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <div class="max-w-xs w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out">
                     <img class="w-full h-40 object-cover rounded-t-lg" alt="Tempat Sirkuit" src="../img/sirkuit.jpg">
                     <div class="p-4">
                         <h2 class="text-xl font-semibold">Tempat Sirkuit</h2>
@@ -334,23 +84,374 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-16 fade-in-section">
+    <section id="about" class="py-16 my-16 bg-gradient-to-r from-green-600 to-green-400 fade-in-section px-4 sm:px-6 md:px-8">  
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold">Tentang Kami</h2>
-            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Kami berkomitmen untuk membantu Anda menemukan tempat-tempat paling menakjubkan di dunia. Misi kami adalah memberikan pengalaman perjalanan terbaik dan membuat perjalanan Anda tak terlupakan.</p>
+            <h2 class="text-3xl font-bold mb-4 fade-in-section text-white">Tentang Wisata Lembah Cinta</h2>
+            <div class="container mx-auto bg-white h-0.5 w-12 fade-in-section"></div>
+            <p class="mt-4 max-w-2xl mx-auto fade-in-section text-white">Wisata Lembah Cinta adalah surga tersembunyi di Desa Cinnongtabi, Wajo, Sulawesi Selatan. Kami menawarkan pengalaman wisata alam yang memukau dengan pemandangan indah, udara segar pegunungan, dan berbagai aktivitas menyenangkan untuk seluruh keluarga. Dari memancing di empang hingga bersantai di rumah pohon, kami berkomitmen untuk memberikan momen-momen tak terlupakan bagi setiap pengunjung.</p>
         </div>
     </section>
 
+    <!-- Review Section -->
+    <div id="review" class="container mx-auto mb-16 fade-in-section px-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">APA YANG MEREKA KATAKAN TENTANG KAMI?</h2>
+        <div class="overflow-hidden py-4">
+            <div class="flex animate-scroll flex-wrap -mx-2">
+                <!-- Card 1 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                    <div class="flex flex-col gap-2 dark:text-whitebg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300 relative hover:z-10">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">Andi Kayzar</div>
+                            <div class="flex flex-wrap">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                            <ul class="list-disc pl-5">
+                                <li>Waktu kunjungan: Akhir pekan</li>
+                                <li>Waktu antrean: Tanpa mengantre</li>
+                                <li>Sebaiknya buat reservasi: Tidak</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                    <div class="flex flex-col gap-2 dark:text-white  bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">Adiswan Dandi</div>
+                            <div class="flex flex-wrap">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                            <ul class="list-disc pl-5">
+                                <li>Waktu kunjungan: Akhir pekan</li>
+                                <li>Waktu antrean: Tanpa mengantre</li>
+                                <li>Sebaiknya buat reservasi: Tidak</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                    <div class="flex flex-col gap-2 dark:text-white  bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">Ardi Wardana</div>
+                            <div class="flex flex-wrap">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                            <ul class="list-disc pl-5">
+                                <li>Waktu kunjungan: Akhir pekan</li>
+                                <li>Waktu antrean: Tanpa mengantre</li>
+                                <li>Sebaiknya buat reservasi: Tidak</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                    <div class="flex flex-col gap-2 dark:text-white bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">FAJRILNIBOSS</div>
+                            <div class="flex flex-wrap">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                        <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                            <ul class="list-disc pl-5">
+                                <li>Waktu kunjungan: Akhir pekan</li>
+                                <li>Waktu antrean: Tanpa mengantre</li>
+                                <li>Sebaiknya buat reservasi: Tidak</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                <div class="flex flex-col gap-2 dark:text-white  bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                        <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">Andi Kayzar</div>
+                                        <div class="flex flex-wrap">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                                        <ul class="list-disc pl-5">
+                                            <li>Waktu kunjungan: Akhir pekan</li>
+                                            <li>Waktu antrean: Tanpa mengantre</li>
+                                            <li>Sebaiknya buat reservasi: Tidak</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                </div>
+            
+                <!-- Card 2 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                <div class="flex flex-col gap-2 dark:text-white  bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                        <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">Adiswan Dandi</div>
+                                        <div class="flex flex-wrap">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                                        <ul class="list-disc pl-5">
+                                            <li>Waktu kunjungan: Akhir pekan</li>
+                                            <li>Waktu antrean: Tanpa mengantre</li>
+                                            <li>Sebaiknya buat reservasi: Tidak</li>
+                                        </ul>
+                                    </div>
+                                </div>
+               </div>
+            
+                <!-- Card 3 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                <div class="flex flex-col gap-2 dark:text-white  bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                        <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">Ardi Wardana</div>
+                                        <div class="flex flex-wrap">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                                        <ul class="list-disc pl-5">
+                                            <li>Waktu kunjungan: Akhir pekan</li>
+                                            <li>Waktu antrean: Tanpa mengantre</li>
+                                            <li>Sebaiknya buat reservasi: Tidak</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                </div>
+            
+                <!-- Card 4 -->
+                <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                <div class="flex flex-col gap-2 dark:text-white  bg-white dark:bg-neutral-900 p-4 rounded-md shadow-md hover:scale-105 transition duration-300">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                        <div class="text-gray-900 dark:text-gray-200 text-lg font-bold mb-2 sm:mb-0">FAJRILNIBOSS</div>
+                                        <div class="flex flex-wrap">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                            <svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg><svg fill="currentColor" viewBox="0 0 20 20" class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.916 1.603-.916 1.902 0l1.286 3.953a1.5 1.5 0 001.421 1.033h4.171c.949 0 1.341 1.154.577 1.715l-3.38 2.458a1.5 1.5 0 00-.54 1.659l1.286 3.953c.3.916-.757 1.67-1.539 1.145l-3.38-2.458a1.5 1.5 0 00-1.76 0l-3.38 2.458c-.782.525-1.838-.229-1.539-1.145l1.286-3.953a1.5 1.5 0 00-.54-1.659l-3.38-2.458c-.764-.561-.372-1.715.577-1.715h4.171a1.5 1.5 0 001.421-1.033l1.286-3.953z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm">Informasi Kunjungan</div>
+                                    <div class="text-gray-900 dark:text-gray-200 text-sm mt-2">
+                                        <ul class="list-disc pl-5">
+                                            <li>Waktu kunjungan: Akhir pekan</li>
+                                            <li>Waktu antrean: Tanpa mengantre</li>
+                                            <li>Sebaiknya buat reservasi: Tidak</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Location Section -->
-    <div class="container mx-auto px-6 py-16 fade-in-section">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Lokasi Kami</h2>
-        <div class="flex justify-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.867358469478!2d120.1243411!3d-4.0474725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d95df1c5db421bb%3A0x2425ec2a8bfd601e!2sWisata%20Lembah%20Cinta!5e0!3m2!1sid!2sid!4v1720180474344!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="location" class="container mx-auto fade-in-section px-4 sm:px-6 md:px-8">
+        <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Lokasi Kami</h2>
+        <div class="bg-white rounded-xl overflow-hidden max-w-4xl mx-auto border-2 border-gray-200 shadow-md">
+            <div class="p-6 bg-gradient-to-r from-green-600 to-green-400">
+                <h3 class="text-2xl font-semibold text-white mb-2">Wisata Lembah Cinta</h3>
+                <p class="text-white text-opacity-90">Desa Cinnong Tabi, Kec. Majauleng, Kabupaten Wajo, Sulawesi Selatan.</p>
+            </div>
+            <div class="relative" style="padding-top: 56.25%">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.867358469478!2d120.1243411!3d-4.0474725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d95df1c5db421bb%3A0x2425ec2a8bfd601e!2sWisata%20Lembah%20Cinta!5e0!3m2!1sid!2sid!4v1720180474344!5m2!1sid!2sid" 
+                    class="absolute top-0 left-0 w-full h-full"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="p-6 bg-gray-100 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <a href="https://www.google.com/maps/place/Wisata+Lembah+Cinta/@-4.0474725,120.1243411,17z/data=!4m15!1m8!3m7!1s0x2d95df1c5db421bb:0x2425ec2a8bfd601e!2sWisata+Lembah+Cinta!8m2!3d-4.0474725!4d120.1243411!10e5!16s%2Fg%2F11t_h2571r!3m5!1s0x2d95df1c5db421bb:0x2425ec2a8bfd601e!8m2!3d-4.0474725!4d120.1243411!16s%2Fg%2F11t_h2571r?entry=ttu" 
+                target="_blank" 
+                class="inline-block bg-green-400 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+                    Buka di Google Maps
+                </a>
+                <div class="text-gray-600 text-center sm:text-right">
+                    <p class="font-semibold">Jam Operasional:</p>
+                    <p>Setiap hari: Buka 24 Jam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ask Section -->
+    <div class="place-items-center fade-in-section my-16 px-4 sm:px-6 md:px-8">
+        <div class="w-full md:w-10/12 lg:w-8/12 mx-auto rounded border">
+            <div class="p-5 md:p-10 shadow-sm">
+                <h3 class="text-lg md:text-xl font-medium text-gray-800">Wisata Lembah Cinta Wajo</h3>
+                <p class="text-sm font-light text-gray-600 my-3">Temukan keindahan alam dan keseruan di Wisata Lembah Cinta, Desa Cinnongtabi, Wajo</p>
+                <div class="h-1 w-full mx-auto border-b my-5"></div>
+                
+                <!-- Accordion 1 -->
+                <div class="transition hover:bg-green-100">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="fas fa-plus"></i>
+                        <h3>Apa itu Wisata Lembah Cinta?</h3>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6 font-light pl-9 text-justify py-5">
+                        Wisata Lembah Cinta adalah destinasi wisata alam yang menakjubkan di Wajo, Sulawesi Selatan. Terletak di Desa Cinnongtabi, tempat ini menawarkan pemandangan indah, udara segar, dan berbagai aktivitas menarik untuk seluruh keluarga.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Accordion 2 -->
+                <div class="transition hover:bg-green-100">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="fas fa-plus"></i>
+                        <h3>Apa saja fasilitas yang tersedia?</h3>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6 font-light pl-9 text-justify py-5">
+                        Wisata Lembah Cinta menyediakan berbagai fasilitas menarik, antara lain:
+                        - Tempat memancing di empang
+                        - Rumah pohon
+                        - Sirkuit untuk aktivitas berkendara
+                        - Kolam renang untuk orang dewasa dan anak-anak
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Accordion 3 -->
+                <div class="transition hover:bg-green-100">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="fas fa-plus"></i>
+                        <h3>Berapa harga tiket masuk?</h3>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6 font-light pl-9 text-justify py-5">
+                        Harga tiket masuk Wisata Lembah Cinta sangat terjangkau, yaitu hanya Rp 10.000 per orang. Dengan harga tersebut, Anda dapat menikmati seluruh fasilitas yang tersedia di dalam kawasan wisata.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Accordion 4 -->
+                <div class="transition hover:bg-green-100">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="fas fa-plus"></i>
+                        <h3>Bagaimana cara menghubungi pengelola?</h3>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6 font-light pl-9 text-justify py-5">
+                        Untuk informasi lebih lanjut atau reservasi, Anda dapat menghubungi pengelola Wisata Lembah Cinta melalui WhatsApp. Klik tombol di bawah ini untuk langsung terhubung dengan kami.
+                        </p>
+                        <a href="https://wa.me/1234567890" target="_blank" class="inline-block rounded-full bg-green-500 text-white font-medium text-sm px-6 py-2 my-5 ml-9 hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>Hubungi via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gradient-to-r from-green-600 to-green-400 text-white py-8">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Wisata Lembah Cinta. Hak Cipta Dilindungi.</p>
         </div>
