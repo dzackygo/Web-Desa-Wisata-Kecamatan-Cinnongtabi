@@ -4,12 +4,18 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      aspectRatio: {
+        'w-16': 16,
+        'h-9': 9,
+      },
       backgroundImage: {
         'gradient-text': 'linear-gradient(to right, var(--tw-gradient-stops))',
       },
     },
   },
+  variants: {},
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
     function ({ addUtilities, theme }) {
       const newUtilities = {
         '.text-gradient': {
